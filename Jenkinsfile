@@ -4,7 +4,7 @@ pipeline {
         stage('add jdbc to workspace') {
             agent {
                 docker {
-                    image 'alpine'
+                    image 'alpine:latest'
                 }
             }
             steps {
