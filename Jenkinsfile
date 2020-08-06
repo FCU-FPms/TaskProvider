@@ -9,6 +9,7 @@ pipeline {
             }
             steps {
                 sh 'echo "pwd = ${pwd}"'
+                sh 'echo "YAYA"'
                 sh "cp ../../franky-mysql/jdbc.properties ./src/main/resources/jdbc.properties"
             }
         }
