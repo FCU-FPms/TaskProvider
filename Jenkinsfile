@@ -1,19 +1,6 @@
 pipeline {
     agent none
     stages {
-        stage('add jdbc to workspace') {
-            agent {
-                docker {
-                    image 'alpine:latest'
-                }
-            }
-            steps {
-                sh 'echo "pwd = ${pwd}"'
-                sh 'echo "YAYA"'
-                sh "cp ../../franky-mysql/jdbc.properties ./src/main/resources/jdbc.properties"
-            }
-        }
-
         stage('Build') {
             agent {
                 docker {
